@@ -1,0 +1,10 @@
+<h1><%= @news_post.title %></h1>
+<div class="meta">
+  <p class="date">
+    <strong>Created on</strong>: <%= @news_post.created_at.strftime('%b %d, %Y') %><br>
+    <strong>Last updated on</strong>: <%= @news_post.updated_at.strftime('%b %d, %Y') %>
+  </p>
+  <p><%= link_to "Edit #{@news_post.title}", edit_news_post_path %></p>
+</div>
+<p><%= @news_post.body %></p>
+<p><%= link_to 'Back to all news', news_posts_path, class: 'btn' %></p>

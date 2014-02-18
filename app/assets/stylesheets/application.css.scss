@@ -1,0 +1,124 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px 40px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: #DE3704;
+  transition: background 0.5s ease-out;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul.menu {
+  margin: 20px 0;
+  padding: 2px 0 2px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+.menu-link {
+  display: block;
+  padding: 4px 10px;
+  font-size: 24px;
+  font-weight: 300;
+
+  &:hover {
+    background: #DE3704;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+dl {
+  margin-top: 50px;
+
+  dt {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+  dd {
+    padding: 0 0 20px;
+    border-bottom: 1px solid #333;
+    margin: 0 0 40px;
+
+    &:last-of-type {
+      border: 0;
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+  background: #ddd;
+}
+.btn-danger {
+  color: #FFF;
+  background-color: #D9534F;
+  border-color: #D43F3A;
+}
+
+header {
+  h1 {
+    font-weight: 300;
+    font-size: 48px;
+  }
+}
+
+.date {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+form {
+  div {
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+}
+label {
+  display: block;
+}
+.text-input {
+  width: 100%;
+  display: block; 
+  border: 1px solid #999;
+  padding: 4px 5px;
+  font-size: 16px;
+}

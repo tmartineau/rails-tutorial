@@ -1,0 +1,13 @@
+<%= form_for @news_post do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => 'text-input' %>
+  </div>
+  <div>
+    <%= f.label :body %>
+    <%= f.text_field :body, :class => 'text-input' %>
+  </div>
+  <div>
+    <%= f.submit :class => 'btn' %>
+  </div>
+<% end %>

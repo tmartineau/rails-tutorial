@@ -1,0 +1,12 @@
+<dt><%= link_to(news_post.title, news_post) %></dt>
+<dd>
+  <span class="date"><%= news_post.created_at.strftime('%b %d, %Y') %></span>
+  <%= news_post.body %>
+  <span class="controls">
+    <%= link_to "Delete", 
+                news_post,
+                method: :delete,
+                confirm: "Are you sure you want to delete the news post",
+                class: 'btn btn-danger' %>
+  </span>
+</dd>
