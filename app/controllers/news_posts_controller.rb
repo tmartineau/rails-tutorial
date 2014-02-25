@@ -1,4 +1,6 @@
 class NewsPostsController < ApplicationController
+
+  before_action :authorize_for_news_posts, except: [:index, :show]
   
   #=================================
   # GET
@@ -13,10 +15,12 @@ class NewsPostsController < ApplicationController
   end
 
   def new
+    redirect_to root_path if current_user.blank?
     @news_post = NewsPost.new
   end
 
   def edit 
+    authorize_for_news_posts
     @news_post = NewsPost.find(params[:id])
   end
 
@@ -50,6 +54,10 @@ class NewsPostsController < ApplicationController
   end
 
   private
+
+    def authorize_for_news_posts
+      redirect_to root_path if current_user.blank?
+    end
 
     def news_post_params
       params.require(:news_post).permit(:title, :body)

@@ -23,6 +23,7 @@ body {
 .container {
   max-width: 960px;
   margin: 0 auto;
+  position: relative;
 }
 
 a {
@@ -86,6 +87,7 @@ dl {
   text-decoration: none;
   color: #000;
   background: #ddd;
+  cursor: pointer;
 }
 .btn-danger {
   color: #FFF;
@@ -121,4 +123,10 @@ label {
   border: 1px solid #999;
   padding: 4px 5px;
   font-size: 16px;
+}
+
+.user-info-cont {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
