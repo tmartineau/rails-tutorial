@@ -1,4 +1,6 @@
 HelloWorld::Application.routes.draw do
+  resources :resume_entries
+
   devise_for :users
   # Static Pages
   root 'pages#home'

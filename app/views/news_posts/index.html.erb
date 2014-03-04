@@ -1,6 +1,8 @@
 <h1>News Posts for Awesome Co.</h1>
 <p>This is the news for the kick ass awesome co company!</p>
+<% if is_admin? %>
 <p><%= link_to('Add new news post', new_news_post_path, class: 'btn') %></p>
+<% end %>
 <dl>
   <%= render @news_posts %>
 </dl>

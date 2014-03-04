@@ -1,6 +1,6 @@
 class NewsPostsController < ApplicationController
 
-  before_action :authorize_for_news_posts, except: [:index, :show]
+  before_action :deny_access_for_non_admins, except: [:index, :show]
   
   #=================================
   # GET
@@ -54,10 +54,6 @@ class NewsPostsController < ApplicationController
   end
 
   private
-
-    def authorize_for_news_posts
-      redirect_to root_path if current_user.blank?
-    end
 
     def news_post_params
       params.require(:news_post).permit(:title, :body)

@@ -2,6 +2,7 @@
 <dd>
   <span class="date"><%= news_post.created_at.strftime('%b %d, %Y') %></span>
   <%= news_post.body %>
+  <% if is_admin? %>
   <span class="controls">
     <%= link_to "Delete", 
                 news_post,
@@ -9,4 +10,5 @@
                 confirm: "Are you sure you want to delete the news post",
                 class: 'btn btn-danger' %>
   </span>
+  <% end %>
 </dd>
