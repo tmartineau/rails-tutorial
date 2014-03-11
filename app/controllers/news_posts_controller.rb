@@ -20,7 +20,6 @@ class NewsPostsController < ApplicationController
   end
 
   def edit 
-    authorize_for_news_posts
     @news_post = NewsPost.find(params[:id])
   end
 
