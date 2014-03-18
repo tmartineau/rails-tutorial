@@ -1,3 +1,26 @@
 <h1>Contact Us</h1>
-<h2><%= @date %></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, nihil, alias, ab a ullam ad dignissimos harum aperiam voluptatum temporibus cum quam rem laboriosam quibusdam consectetur sit hic fuga quo!</p>
+<% if @success %>
+  <p class="success">THANKS FOR SUBMITTING!</p>
+<% else %>
+  <%= form_tag do %>
+    <div>
+      <%= label_tag :first_name, 'First Name' %>
+      <%= text_field_tag :first_name, nil, class: 'text-input' %>
+    </div>
+    <div>
+      <%= label_tag :last_name, 'Last Name' %>
+      <%= text_field_tag :last_name, nil, class: 'text-input' %>
+    </div>
+    <div>
+      <%= label_tag :email %>
+      <%= text_field_tag :email, nil, class: 'text-input' %>
+    </div>
+    <div>
+      <%= label_tag :message %>
+      <%= text_field_tag :message, nil, class: 'text-input' %>
+    </div>
+    <div>
+      <%= submit_tag 'Send Message', class: 'btn' %>
+    </div>
+  <% end %>
+<% end %>

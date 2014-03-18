@@ -6,6 +6,8 @@ HelloWorld::Application.routes.draw do
   root 'pages#home'
   
   get '/contact' => 'pages#contact'
+  post '/contact' => 'pages#contact'
+  
   get '/about' => 'pages#about'
   get '/interesting_facts' => 'pages#interesting_facts'
   get '/oh-ya' => 'pages#about'
